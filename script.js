@@ -1,3 +1,9 @@
+function myfunc() {
+	const inputNumber = document.getElementById("input").value;
+const romanNumeral = intToRoman(inputNumber);
+Show.innerHTML  = romanNumeral;
+}
+
 function intToRoman(num) {
   const romanSymbols = [
     { value: 1000, symbol: "M" },
@@ -27,7 +33,3 @@ function intToRoman(num) {
   return result;
 }
 
-// Example usage:
-const inputNumber = 798;
-const romanNumeral = intToRoman(inputNumber);
-console.log(romanNumeral); // Output: "DCCXCVIII"
