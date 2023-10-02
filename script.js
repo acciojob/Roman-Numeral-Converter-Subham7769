@@ -1,7 +1,12 @@
 function myfunc() {
-	const inputNumber = document.getElementById("input").value;
-const romanNumeral = intToRoman(inputNumber);
-Show.innerHTML  = romanNumeral;
+  const inputNumber = parseInt(document.getElementById("input").value);
+  
+  if (inputNumber >= 0 && inputNumber <= 100000) {
+    const romanNumeral = intToRoman(inputNumber);
+    Show.innerHTML = romanNumeral;
+  } else {
+    Show.innerHTML = "Input out of range";
+  }
 }
 
 function intToRoman(num) {
@@ -32,4 +37,3 @@ function intToRoman(num) {
 
   return result;
 }
-
